@@ -1,16 +1,7 @@
-const http = require('http');
-const server = http.createServer();
+const express = require('express');
 
-//event emitters
-// streams
-// clusters
+const app = express();
 
-server.on('request', (req, res) => {
-    res.write("Server Up!\n");
-    setTimeout(() => {
-        res.write("Still on. ...");
-        res.end();
-    }, 3000)
-});
+app.use(express.static('client'));
 
-server.listen(8080);
+app.listen(8080)
