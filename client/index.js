@@ -1,4 +1,7 @@
+import App from './components/app';
+
 ReactDOM.render(
-  React.createElement("h2", null, "React Works!"),
+  <App />,
   document.getElementById("root")
 );
+ 
